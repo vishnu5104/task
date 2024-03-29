@@ -38,12 +38,19 @@ describe("TokenVault", function () {
     const amountToWithdraw = ethers.parseEther("50");
 
     await tokenInstance.connect(owner).approve(tokenVaultInstance.getAddress(), amountToDeposit);
-    console.log(amountToDeposit,'the amount')
     await tokenVaultInstance.connect(owner).deposit(amountToDeposit);
+
+    const ownerBalanceBefore = await tokenInstance.balanceOf(owner.getAddress());
+
+
     await tokenVaultInstance.connect(owner).withdraw(amountToWithdraw);
 
+    const ownerBalanceAfter = await tokenInstance.balanceOf(owner.getAddress());
 
-  });
+    console.log('the balance of owner after , before',ownerBalanceAfter,ownerBalanceBefore)
+
+    expect(ownerBalanceAfter).to.equal(ownerBalanceBefore + amountToWithdraw);
+});
 
   it("should not allow withdrawal of more tokens than deposited", async function () {
     const amountToDeposit = ethers.parseEther("100");
