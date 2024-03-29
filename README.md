@@ -1,13 +1,1 @@
-# Sample Hardhat Project
-
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+This leverages Solidity and Hardhat to demonstrate the deployment and interaction between an ERC20 token and a Vault contract. The ERC20 token represents a customizable digital currency, while the Vault contract provides a secure mechanism for depositing and withdrawing these tokens. Aimed at developers and enthusiasts in the blockchain space, this project serves as a practical guide to smart contract development, testing, and interaction within the Ethereum ecosystem.
