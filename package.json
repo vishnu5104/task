@@ -1,0 +1,32 @@
+{
+  "name": "dev-reward",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js && bash ./bin/cache/install.sh"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramped-fire/proof-merkell/issues"
+  },
+  "homepage": "https://github.com/ramped-fire/proof-merkell#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2",
+    "fs": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.14",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "^20.11.30",
+    "hardhat": "^2.22.2",
+    "typescript": "^5.4.3"
+  }
+}
