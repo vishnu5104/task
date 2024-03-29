@@ -6,10 +6,10 @@ describe("TokenVault", function () {
   let tokenVaultInstance;
 
   const initialBalance = ethers.parseEther("1000");
-  let owner, user1, user2;
+  let owner;
 
   beforeEach(async function () {
-    [owner, user1, user2] = await ethers.getSigners();
+    [owner] = await ethers.getSigners();
 
     const MockToken = await ethers.getContractFactory("Mock");
     tokenInstance = await MockToken.deploy(owner.address, "MKT");
